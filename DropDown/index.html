@@ -61,30 +61,39 @@
         function show(anything){
             document.querySelector('.textBox').value = anything;
         }
-
+    
+        function closeAllDropdowns() {
+            // Remove 'active' class from all dropdowns
+            document.querySelectorAll('.dropdown').forEach(function(dropdown) {
+                dropdown.classList.remove('active');
+            });
+        }
+    
         let dropone = document.querySelector('.dropone');
         dropone.onclick = function(){
+            closeAllDropdowns();
             dropone.classList.toggle('active');
         }
-
+        
         let droptwo = document.querySelector('.droptwo');
         droptwo.onclick = function(){
+            closeAllDropdowns();
             droptwo.classList.toggle('active');
         }
-
+    
         let dropthree = document.querySelector('.dropthree');
         dropthree.onclick = function(){
+            closeAllDropdowns();
             dropthree.classList.toggle('active');
         }
         
         let dropfour = document.querySelector('.dropfour');
         dropfour.onclick = function(){
+            closeAllDropdowns();
             dropfour.classList.toggle('active');
         }
-
-
     </script>
-
+    
 
     
     
