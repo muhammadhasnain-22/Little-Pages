@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drop Down</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="style.css">
+
+   
+
+
+</head>
+<body>
+
+    <div class="dropdown">
+        <input type="text" class="textBox" placeholder="Dropdown Menu" readonly>
+        <div class="option">
+            <div onclick="show('HTML')" ><i class="fa-brands fa-html5"></i> HTML</div>
+            <div onclick="show('CSS')" ><i class="fa-brands fa-css3-alt"></i> CSS</div>
+            <div onclick="show('Javascript')" ><i class="fa-brands fa-js-square"></i> Javascript</div>
+            <div onclick="show('Bootstrap')" ><i class="fa-brands fa-bootstrap"></i> Bootstrap</div>
+            <div onclick="show('ReactJS')" ><i class="fa-brands fa-react"></i> ReactJS</div>
+        </div>
+    </div>
+
+
+    <script>
+        function show(anything){
+            document.querySelector('.textBox').value = anything;
+        }
+
+        let dropdown = document.querySelector('.dropdown');
+        dropdown.onclick = function(){
+            dropdown.classList.toggle('active');
+        }
+    </script>
+
+
+    
+    
+</body>
+</html>

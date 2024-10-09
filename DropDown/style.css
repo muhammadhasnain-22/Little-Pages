@@ -1,0 +1,92 @@
+
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    transition: 0.3s;
+    
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: rgb(49, 143, 146);
+}
+
+.dropdown {
+    position: relative;
+    width: 16rem;
+    height: 3rem ;
+    transition: 0.3s;
+}
+
+.dropdown.active {
+    margin-top: -1rem;
+}
+
+
+.dropdown::before {
+    content: '';
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    z-index: 1000;
+    width: 8px;
+    height: 8px;
+    border: 2px solid black;
+    border-right: 2px solid white;
+    border-top: 2px solid white;
+    transform: rotate(-46deg);
+    transition: 0.3s;
+    pointer-events: none;
+}
+
+.dropdown.active::before{
+    top: 22px;
+    transform: rotate(-225deg);
+}
+
+.dropdown input {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255);
+    font-size: 20px;
+    border: none;
+    outline: none;
+    
+    padding: 12px 20px;
+    border-radius: 10px;
+}
+
+.dropdown .option {
+    position: absolute;
+    width:100%;
+    height: 0;
+    top: 70px;
+    background-color: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(10px);
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.418);
+    transition: 0.3s;
+}
+
+.dropdown.active .option {
+    height: 210px;
+}
+
+.dropdown .option div {
+    padding: 12px 20px;
+    cursor: pointer;
+}
+
+.dropdown .option div:hover {
+    background: rgb(84, 165, 197);
+    color: white;
+}
