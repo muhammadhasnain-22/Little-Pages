@@ -1,0 +1,110 @@
+* {
+    padding: 0;
+    margin: 0%;
+    box-sizing: border-box;
+    transition: 0.3s
+
+}
+
+body {
+    width: 100%;
+    /* min-height: 50vh; */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family:'Times New Roman', Times, serif;
+    font: 800;
+    color: white;
+
+}
+
+body::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 140vh;
+    z-index: -1;
+    background-image: url("/VisaCard/image2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+body .visacard {
+    width: 25rem;
+    height: 14em;
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 1px 1px 15px 2px rgba(255, 255, 255, 0.219);
+    backdrop-filter: blur(5px);
+    border: 2px solid rgba(255, 255, 255, 0.103);
+    border-radius: 2rem;
+    padding: 1rem;
+}
+
+body .visacard .card{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+body .visacard .card .left {
+    margin: 1rem;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+}
+body .visacard .card .left .cardtitle {
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+}
+body .visacard .card .left .cardtitle .logo{
+    /* width:auto; */
+    display: flex;
+}
+body .visacard .card .left .cardtitle .logo .first-circle {
+    width:1.8rem;
+    height: 1.8rem;
+    background-color: rgba(255, 0, 0, 0.7);
+    clip-path: circle(50% at 50% 50%);
+}
+body .visacard .card .left .cardtitle .logo .second-circle {
+    width:1.8rem;
+    height: 1.8rem;
+    position: relative;
+    right: .5rem;
+    background-color: rgba(255, 166, 0, 0.7);
+    clip-path: circle(50% at 50% 50%);
+}
+
+
+
+.card .left .number {
+    margin-top: 18%;
+}
+.card .left .smart-line {
+    margin-top: 12%;
+
+}
+
+.card .right{
+    margin:  0 0 0 2rem;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+.card .right .identifier {
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+.card .right .identifier .sim{
+    width: 4.5rem;
+    height: 4rem;
+    /* background-color: #f00f0f; */
+    background-image: url("/VisaCard/simChip.png");
+    background-size: contain;
+
+}
