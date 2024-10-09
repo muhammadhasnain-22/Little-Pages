@@ -15,16 +15,46 @@
 </head>
 <body>
 
-    <div class="dropdown">
-        <input type="text" class="textBox" placeholder="Dropdown Menu" readonly>
-        <div class="option">
-            <div onclick="show('HTML')" ><i class="fa-brands fa-html5"></i> HTML</div>
-            <div onclick="show('CSS')" ><i class="fa-brands fa-css3-alt"></i> CSS</div>
-            <div onclick="show('Javascript')" ><i class="fa-brands fa-js-square"></i> Javascript</div>
-            <div onclick="show('Bootstrap')" ><i class="fa-brands fa-bootstrap"></i> Bootstrap</div>
-            <div onclick="show('ReactJS')" ><i class="fa-brands fa-react"></i> ReactJS</div>
+    <div class="bar">
+        <div class="dropdown dropone">
+            <input type="text" class="textBox" placeholder="Web Development" readonly>
+            <div class="option">
+                <div onclick="show('HTML')" ><i class="fa-brands fa-html5"></i> HTML</div>
+                <div onclick="show('CSS')" ><i class="fa-brands fa-css3-alt"></i> CSS</div>
+                <div onclick="show('Javascript')" ><i class="fa-brands fa-js-square"></i> Javascript</div>
+                <div onclick="show('Bootstrap')" ><i class="fa-brands fa-bootstrap"></i> Bootstrap</div>
+                <div onclick="show('ReactJS')" ><i class="fa-brands fa-react"></i> ReactJS</div>
+            </div>
         </div>
+        <div class="dropdown droptwo">
+            <input type="text" class="textBox" placeholder="Graphic Designing" readonly>
+            <div class="option">
+                <div onclick="show('Illustrator')" >Illustrator</div>
+                <div onclick="show('Photoshop')" >Photoshop</div>
+                <div onclick="show('AdobeXD')" >Adobe XD</div>
+                <div onclick="show('Figma')" >Figma</div>
+            </div>
+        </div>
+        <div class="dropdown dropthree">
+            <input type="text" class="textBox" placeholder="Content Writing" readonly>
+            <div class="option">
+                <div onclick="show('Notion')" >Notion</div>
+                <div onclick="show('Grammerly')" >Grammerly</div>
+                <div onclick="show('Chatgpt')" >Chat GPT</div>
+            </div>
+        </div>
+        <div class="dropdown dropfour">
+            <input type="text" class="textBox" placeholder="Time Period" readonly>
+            <div class="option">
+                <div onclick="show('1Month')" >1 Month</div>
+                <div onclick="show('2Month')" >2 Month</div>
+                <div onclick="show('3Month')" >3 Month</div>
+                <div onclick="show('4Month')" >6 Month</div>
+            </div>
+        </div>
+
     </div>
+
 
 
     <script>
@@ -32,10 +62,27 @@
             document.querySelector('.textBox').value = anything;
         }
 
-        let dropdown = document.querySelector('.dropdown');
-        dropdown.onclick = function(){
-            dropdown.classList.toggle('active');
+        let dropone = document.querySelector('.dropone');
+        dropone.onclick = function(){
+            dropone.classList.toggle('active');
         }
+
+        let droptwo = document.querySelector('.droptwo');
+        droptwo.onclick = function(){
+            droptwo.classList.toggle('active');
+        }
+
+        let dropthree = document.querySelector('.dropthree');
+        dropthree.onclick = function(){
+            dropthree.classList.toggle('active');
+        }
+        
+        let dropfour = document.querySelector('.dropfour');
+        dropfour.onclick = function(){
+            dropfour.classList.toggle('active');
+        }
+
+
     </script>
 
 
